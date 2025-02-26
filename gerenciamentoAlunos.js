@@ -33,3 +33,11 @@ const turma = [
   { nome: "Luiza", idade: 17, matricula: 862379, curso: "SI" },
   { nome: "Pedro", idade: 19, matricula: 368572, curso: "EC" }
 ]
+
+
+/*3. Adição de Alunos(as): Implemente uma função adicionarAluno(nome, idade, matricula, curso) que cria um novo registro aluno com os valores passados como argumentos e o adiciona à turma.*/
+
+const adicionarAluno = (nome, idade, matricula, curso) => {
+  const novoAluno = { nome, idade, matricula, curso }
+  turma.push(novoAluno)
+}
