@@ -41,3 +41,15 @@ const adicionarAluno = (nome, idade, matricula, curso) => {
   const novoAluno = { nome, idade, matricula, curso }
   turma.push(novoAluno)
 }
+
+
+/*4. Listagem de Alunos(as): Crie uma função listarAlunos() que percorre a turma e exibe os detalhes de cada aluno(a) (nome, idade, matricula e curso) no console.*/
+
+const listarAlunos = () => {
+  turma.forEach(aluno => {
+    console.log(`Nome: ${aluno.nome}`)
+    console.log(`Idade: ${aluno.idade}`)
+    console.log(`Matrícula: ${aluno.matricula}`)
+    console.log(`Curso: ${aluno.curso}`)
+  })
+}
