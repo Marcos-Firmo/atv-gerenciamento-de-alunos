@@ -24,3 +24,12 @@ const aluno = [
         curso: "EC" 
     }
 ]
+
+
+/*2. Criação da Turma: Crie uma lista chamada turma que armazenará instâncias dos(as) alunos(as).*/
+
+const turma = [
+  { nome: "Marcos", idade: 20, matricula: 563224, curso: "CC" },
+  { nome: "Luiza", idade: 17, matricula: 862379, curso: "SI" },
+  { nome: "Pedro", idade: 19, matricula: 368572, curso: "EC" }
+]
