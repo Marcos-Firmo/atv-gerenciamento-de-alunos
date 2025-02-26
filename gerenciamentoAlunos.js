@@ -33,14 +33,16 @@ const turma = [
 ]
 
 
-/*3. Adição de Alunos(as): Implemente uma função adicionarAluno(nome, idade, matricula, curso) que cria um novo registro aluno com os valores passados como argumentos e o adiciona à turma.*/
+/*3. Adição de Alunos(as): Implemente uma função adicionarAluno(nome, idade, matricula, curso) que cria um 
+novo registro aluno com os valores passados como argumentos e o adiciona à turma.*/
 const adicionarAluno = (nome, idade, matricula, curso) => {
   const novoAluno = { nome, idade, matricula, curso }
   turma.push(novoAluno)
 }
 
 
-/*4. Listagem de Alunos(as): Crie uma função listarAlunos() que percorre a turma e exibe os detalhes de cada aluno(a) (nome, idade, matricula e curso) no console.*/
+/*4. Listagem de Alunos(as): Crie uma função listarAlunos() que percorre a turma e exibe os detalhes de cada 
+aluno(a) (nome, idade, matricula e curso) no console.*/
 const listarAlunos = () => {
   turma.forEach(aluno => {
     console.log(`Nome: ${aluno.nome}`)
@@ -51,18 +53,32 @@ const listarAlunos = () => {
 }
 
 
-/*5. Busca por Curso: Implemente uma função buscarPorCurso(curso) que recebe um curso como argumento e retorna uma lista contendo todos os alunos do catálogo que pertencem ao curso especificado.*/
+/*5. Busca por Curso: Implemente uma função buscarPorCurso(curso) que recebe um curso como argumento e retorna 
+uma lista contendo todos os alunos do catálogo que pertencem ao curso especificado.*/
 const buscarPorCurso = (curso) => {
   const alunosDoCurso = turma.filter(aluno => aluno.curso === curso)
   return alunosDoCurso
 }
 
 
-/*6. Remoção de Alunos: Crie uma função removerAluno(nome) que recebe o nome de um aluno(a) como argumento e remove o aluno(a) correspondente da turma.*/
+/*6. Remoção de Alunos: Crie uma função removerAluno(nome) que recebe o nome de um aluno(a) como argumento e remove 
+o aluno(a) correspondente da turma.*/
 const removerAluno = (nome) => (turma = turma.filter(aluno => aluno.nome !== nome))
 
 
-/*7. Ordenação: Implemente uma função para ordenar os alunos(as) na turma por número de matrícula, do mais antigo ao mais recente.*/
+/*7. Ordenação: Implemente uma função para ordenar os alunos(as) na turma por número de matrícula, do mais antigo 
+ao mais recente.*/
 const ordenarAlunos = () => {
   turma.sort((x, y) => x.matricula - y.matricula)
+}
+
+
+/*8. Contagem de Alunos por Curso: Crie uma função que retorna a contagem de alunos(as) para cada curso presente na
+turma.*/
+const contarAlunosPorCurso = () => {
+  const contagem = turma.reduce((x, c) => {
+    x[c.curso] = (x[c.curso] || 0) + 1
+    return x
+  })
+  return contagem
 }
