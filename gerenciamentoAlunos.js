@@ -53,3 +53,11 @@ const listarAlunos = () => {
     console.log(`Curso: ${aluno.curso}`)
   })
 }
+
+
+/*5. Busca por Curso: Implemente uma função buscarPorCurso(curso) que recebe um curso como argumento e retorna uma lista contendo todos os alunos do catálogo que pertencem ao curso especificado.*/
+
+const buscarPorCurso = (curso) => {
+  const alunosDoCurso = turma.filter(aluno => aluno.curso === curso)
+  return alunosDoCurso
+}
