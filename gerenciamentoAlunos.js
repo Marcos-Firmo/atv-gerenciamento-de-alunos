@@ -82,3 +82,16 @@ const contarAlunosPorCurso = () => {
   })
   return contagem
 }
+
+
+/*9. Edição de Alunos: Permita a edição dos detalhes de um(a) aluno(a), como nome, matricula, idade ou curso.*/
+const editarAluno = (nome, novoNome, novaMatricula, novaIdade, novoCurso) => {
+  turma.forEach(aluno => {
+    if (aluno.nome === nome) {
+      aluno.nome = novoNome
+      aluno.matricula = novaMatricula
+      aluno.idade = novaIdade
+      aluno.curso = novoCurso
+    }
+  })
+}
