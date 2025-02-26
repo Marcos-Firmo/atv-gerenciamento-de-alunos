@@ -61,3 +61,8 @@ const buscarPorCurso = (curso) => {
   const alunosDoCurso = turma.filter(aluno => aluno.curso === curso)
   return alunosDoCurso
 }
+
+
+/*6. Remoção de Alunos: Crie uma função removerAluno(nome) que recebe o nome de um aluno(a) como argumento e remove o aluno(a) correspondente da turma.*/
+
+const removerAluno = (nome) => (turma = turma.filter(aluno => aluno.nome !== nome))
